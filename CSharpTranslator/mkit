@@ -4,6 +4,14 @@ set -e
 
 TARGET=${1-buildcs2j}
 
+#NOTE: due to a JVM bug fixed after Java6 that ANTLR3 relied on,
+# this requires Java 6 in order to run. The output is now included in source control,
+# so it shouldn't be necessary to regenerate these files.
+# last time this was done it was using Docker:
+#
+# docker run  -ti --rm -v $(pwd):/project inventit/docker-java6-ant
+# and then "sh mkit" from the resulting prompt
+
 ant -f build/build.xml ${TARGET}
 
 ## cd src/CSharpParser

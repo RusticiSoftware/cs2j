@@ -1,7 +1,1 @@
 *.tokens
-csLexer.cs
-csParser.cs
-TemplateExtracter.cs
-NetMaker.cs
-JavaMaker.cs
-JavaPrettyPrint.cs
